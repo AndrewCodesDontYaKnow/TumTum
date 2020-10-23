@@ -6,16 +6,23 @@ const apiKey =
 
 const Yelp = {
 
-const search = (term, location, sortBy) => {
+search(term, location, sortBy) {
+    console.log(`term is: ${term}`)
   return fetch(
-    `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`,
+    `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}
+    `,
+
     {
       headers: {
         Authorization: `Bearer ${apiKey}`,
-      },
+        // "X-Requested-With": "XMLHttpRequest",
+        'Access-Control-Allow-Origin': '*'
+      }
     }
   )
     .then((response) => {
+        console.log(`hi`)
+        console.log(response)
       return response.json();
     })
     .then((jsonResponse) => {
@@ -34,7 +41,10 @@ const search = (term, location, sortBy) => {
           };
         });
       }
-    });
+    })
+    .then(beforeObjecIsSent => {
+        console.log("beforeObjecIsSent ", beforeObjecIsSent);
+      });
 }
 };
 
