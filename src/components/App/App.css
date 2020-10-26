@@ -18,14 +18,22 @@ input:focus {
 
 .image-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  background: #000;
+  justify-content: space-between;
+  align-items: start;
+  align-content: start;
+  display: block;
+  content: " placeholder ";
+  margin: 8px;
+  flex: 999 999 auto;
+  max-width: 400px;
 }
 
 .image-container img {
   width: 100%;
+  flex: 0 0 auto;
+  margin: 8px;
 }
 
 /* App Styles */

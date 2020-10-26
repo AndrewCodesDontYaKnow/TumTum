@@ -63,8 +63,8 @@ class SearchBar extends Component {
           <ul>{this.renderSortByOptions()}</ul>
         </div>
         <div className="SearchBar-fields">
-          <input onChange={this.handleTermChange} placeholder="Search Businesses" />
-          <input onChange={this.handleLocationChange} placeholder="Where?" />
+          <input onChange={this.handleTermChange} placeholder="Food" />
+          <input onChange={this.handleLocationChange} placeholder="Location" />
         </div>
         <div className="SearchBar-submit">
           <a onClick={this.handleSearch}>Find some grub...</a>
