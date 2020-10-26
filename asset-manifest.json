@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tumtum/static/css/main.dadbaf83.chunk.css",
+    "main.js": "/tumtum/static/js/main.767d89f8.chunk.js",
+    "main.js.map": "/tumtum/static/js/main.767d89f8.chunk.js.map",
+    "runtime-main.js": "/tumtum/static/js/runtime-main.3630c1c0.js",
+    "runtime-main.js.map": "/tumtum/static/js/runtime-main.3630c1c0.js.map",
+    "static/js/2.cf689eec.chunk.js": "/tumtum/static/js/2.cf689eec.chunk.js",
+    "static/js/2.cf689eec.chunk.js.map": "/tumtum/static/js/2.cf689eec.chunk.js.map",
+    "index.html": "/tumtum/index.html",
+    "precache-manifest.6a57b2af8c375a8a94d141d14bdf5351.js": "/tumtum/precache-manifest.6a57b2af8c375a8a94d141d14bdf5351.js",
+    "service-worker.js": "/tumtum/service-worker.js",
+    "static/css/main.dadbaf83.chunk.css.map": "/tumtum/static/css/main.dadbaf83.chunk.css.map",
+    "static/js/2.cf689eec.chunk.js.LICENSE.txt": "/tumtum/static/js/2.cf689eec.chunk.js.LICENSE.txt",
+    "static/media/SearchBar.css": "/tumtum/static/media/background_search_mobile.ba0e5eec.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3630c1c0.js",
+    "static/js/2.cf689eec.chunk.js",
+    "static/css/main.dadbaf83.chunk.css",
+    "static/js/main.767d89f8.chunk.js"
+  ]
+}
