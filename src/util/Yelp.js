@@ -5,48 +5,39 @@ const apiKey =
   "krSGtOieQbHcaagQMTjsSyRwWzFw-AuHw7NyR40w1n9nhakj-jxv88KxJQAEWJYUc0fdHiMk9F80Ng-ZMuxQyYQRlBA7i-xEo8U_n-W3_s6WgsKh8ucMCDrIHROTX3Yx";
 
 const Yelp = {
+    
   search(term, location, sortBy) {
-    console.log(`term is: ${term}`);
     return fetch(
       `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}
     `,
 
       {
-        method: "GET",
         headers: {
-          Authorization: `Bearer ${apiKey}`,
-          // "X-Requested-With": "XMLHttpRequest",
-          "Access-Control-Allow-Origin": "*",
-        },
+          Authorization: `Bearer ${apiKey}`
+        }
       }
     )
       .then((response) => {
-
-// `const testName = response.jsonBody.businesses[0].name`
-
-        console.log(`hi`);
-        console.log(response);
         return response.json();
       })
-      .then((jsonResponse) => {
+      .then(jsonResponse => {
+          console.log(jsonResponse.businesses)
         if (jsonResponse.businesses) {
-          return jsonResponse.businesses.map((business) => {
+          return jsonResponse.businesses.map(business => {
             return {
               id: business.id,
-              imageSrc: business.imageSrc,
-              address: business.address,
-              city: business.city,
-              state: business.state,
-              zipCode: business.zipCode,
-              category: business.category,
+              imgSrc: business.image_url,
+              name: business.name,
+              address: business.location.address1,
+              city: business.location.city,
+              state: business.location.state,
+              zipCode: business.location.zip_code,
+              category: business.categories[0].title,
               rating: business.rating,
-              reviewCount: business.reviewCount,
+              reviewCount: business.review_count
             };
           });
         }
-      })
-      .then((beforeObjecIsSent) => {
-        console.log("beforeObjecIsSent ", beforeObjecIsSent);
       });
   },
 };
