@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./SearchBar.css";
 
-
-
 class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -11,8 +9,6 @@ class SearchBar extends Component {
       location: "",
       sortBy: "best_match",
     };
-
-    console.log(this.state)
 
     this.handleTermChange = this.handleTermChange.bind(this)
     this.handleLocationChange = this.handleLocationChange.bind(this)
@@ -38,7 +34,6 @@ class SearchBar extends Component {
   }
 
   handleSearch(event) {
-    console.log(this.props)
     this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy)
     event.preventDefault()
   }
@@ -49,9 +44,7 @@ class SearchBar extends Component {
 
   renderSortByOptions() {
     return Object.keys(this.sortByOptions).map((sortByOption) => {
-
       let sortByOptionValue = this.sortByOptions[sortByOption];
-
       return <li onClick={this.handleSortByChange.bind(this, sortByOptionValue)} className={this.getSortByClass(sortByOptionValue)} key={sortByOptionValue}>{sortByOption}</li>;
     });
   }

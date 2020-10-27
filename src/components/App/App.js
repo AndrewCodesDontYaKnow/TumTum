@@ -4,7 +4,6 @@ import BusinessList from "./../BusinessList/BusinessList";
 import SearchBar from "./../SearchBar/SearchBar";
 import Yelp from "./../../util/Yelp";
 
-
 class App extends React.Component {
   
   constructor(props) {
@@ -14,10 +13,8 @@ class App extends React.Component {
   }
 
   searchYelp(term, location, sortBy) {
-    console.log(`searchYelp fired off`)
     Yelp.search(term, location, sortBy)
     .then(businesses => {
-      console.log(businesses)
       this.setState({
         businesses: businesses
       })
@@ -25,7 +22,6 @@ class App extends React.Component {
   }
 
   render(){
-    console.log(this.state.businesses)
   return (
     <div className="App">
       <h1>tumtum.</h1>
