@@ -42,6 +42,7 @@ class SearchBar extends Component {
     event.preventDefault();
   }
 
+  
   getSortByClass(sortByOption) {
     return this.state.sortBy === sortByOption ? "active" : "";
   }
